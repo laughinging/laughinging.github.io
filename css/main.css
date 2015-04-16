@@ -513,15 +513,15 @@ td {
   font-style: italic;
 }
 @font-face {
-  font-family: 'fontawesome';
-  src: url("../fonts/icon-fontawesome/icomoon.eot?-9394c0");
-  src: url("../fonts/icon-fontawesome/icomoon.eot?#iefix-9394c0") format('embedded-opentype'), url("../fonts/icon-fontawesome/icomoon.woff?-9394c0") format('woff'), url("../fonts/icon-fontawesome/icomoon.ttf?-9394c0") format('truetype'), url("../fonts/icon-fontawesome/icomoon.svg?-9394c0#fontawesome") format('svg');
+  font-family: 'fontAwesome';
+  src: url("../fonts/icon-fontAwesome/icomoon.eot?-9394c0");
+  src: url("../fonts/icon-fontAwesome/icomoon.eot?#iefix-9394c0") format('embedded-opentype'), url("../fonts/icon-fontAwesome/icomoon.woff?-9394c0") format('woff'), url("../fonts/icon-fontAwesome/icomoon.ttf?-9394c0") format('truetype'), url("../fonts/icon-fontAwesome/icomoon.svg?-9394c0#fontAwesome") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'fontawesome';
+  font-family: 'fontAwesome';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -558,82 +558,55 @@ td {
   content: "\e063";
 }
 .icon-home:before {
-  content: "\e108";
+  content: "\f015";
 }
 .icon-categories:before {
-  content: "\e031";
+  content: "\f0c9";
 }
 .icon-archives:before {
-  content: "\e022";
+  content: "\f0f6";
 }
 .icon-about:before {
-  content: "\e074";
+  content: "\f118";
 }
 .icon-heart:before {
-  content: "\e024";
+  content: "\f08a";
 }
 .icon-feed:before {
-  content: "\e011";
+  content: "\f09e";
 }
 .icon-tags:before {
-  content: "\e009";
+  content: "\f09e";
 }
 .icon-external-link:before {
-  content: "\e128";
+  content: "\f08e";
 }
-.icon-link:before {
-  content: "\e005";
+.icon-female:before {
+  content: "\f182";
 }
-.icon-image:before {
-  content: "\e010";
+.icon-graduation-cap:before {
+  content: "\f19d";
 }
-.icon-storage:before {
-  content: "\e022";
+.icon-star-half-o:before {
+  content: "\f123";
 }
-.icon-circle-check:before {
-  content: "\e042";
+.icon-cutlery:before {
+  content: "\f0f5";
 }
-.icon-square-plus:before {
-  content: "\e044";
+.icon-comments-o:before {
+  content: "\f0e6";
 }
-.icon-square-minus:before {
-  content: "\e045";
+.icon-github:before {
+  content: "\f09b";
 }
-.icon-square-check:before {
-  content: "\e046";
+.icon-twitter:before {
+  content: "\f099";
 }
-.icon-square-cross:before {
-  content: "\e047";
+.icon-comment:before {
+  content: "\f075";
 }
-.icon-record:before {
-  content: "\e049";
-}
-.icon-rewind:before {
-  content: "\e051";
-}
-.icon-stop:before {
-  content: "\e054";
-}
-.icon-fast-forward:before {
-  content: "\e055";
-}
-.icon-moon:before {
-  content: "\e061";
-}
-.icon-box:before {
-  content: "\e079";
-}
-.icon-share:before {
-  content: "\e081";
-}
-.icon-tag:before {
-  content: "\e085";
-}
-.icon-archive:before {
-  content: "\e121";
-}
-.icon-fa-heart-o:before {
-  content: "\f08a";
+.icon-gamepad:before {
+  content: "\f11b";
 }
 .post pre,
 .post .highlight {
@@ -1090,7 +1063,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff91b5;
+  background: #2effff;
 }
 .sidebar-nav {
   margin: 0;
