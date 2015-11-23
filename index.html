@@ -119,8 +119,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/07/21/hello-world/">
-                Hello World
+              <a class="post-title-link" href="/2015/07/26/python/">
+                Learning Python 5th edition — Reading notes
               </a>
             
           
@@ -129,7 +129,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-07-21
+          Posted on 2015-07-26
         </span>
 
         
@@ -147,13 +147,72 @@
 
       
         
-          <p>Welcome to my blog !  </p>
+          <h1 id="Chapter_1_A_Python_Q&amp;A_Session">Chapter 1 A Python Q&amp;A Session</h1><p>Advantages:</p>
+<ul>
+<li>Software quality, object-oriented</li>
+<li>Developer productivity</li>
+<li>Program portability</li>
+<li>Support libraries</li>
+<li>Component integration</li>
+<li>Enjoyment XD</li>
+<li>not only a Scripting Language</li>
+</ul>
+<p>Disadvantage:</p>
+<ul>
+<li>execution speed: not fully compiled</li>
+</ul>
+<p>Fun notes:</p>
+<ul>
+<li>try <code>import this</code> </li>
+</ul>
+<h1 id="Chapter_2_How_Python_Runs_Programs">Chapter 2 How Python Runs Programs</h1><p>Python as an interpreter: a layer of software logic between code and<br>computer hardware.</p>
+<blockquote>
+<p>Source <code>m.py</code>  -&gt; Byte code <code>m.pyc</code>  -&gt; Runtime in python virtual machine(PVM) </p>
+</blockquote>
+<p>Note that Python byte code is not binary machine code (instructions for an<br>Intel or ARM chip). Byte code is a Python-specific representation. That is<br>why some python code may not run as fast as C/C++. </p>
+<h1 id="Chapter_3_How_You_Run_Programs">Chapter 3 How You Run Programs</h1><h2 id="hash_bang_/_shebang">hash bang / shebang</h2><p>tell the system where the python interpreter is, use <code>sys.executable</code> to find location.</p>
+<blockquote>
+<p>#!/usr/local/bin/python3.4</p>
+</blockquote>
+<p>or set the environment like:</p>
+<blockquote>
+<p>#!/usr/bin/env python3</p>
+</blockquote>
+<h2 id="How_to_run_programs">How to run programs</h2><p>Just simply</p>
+<blockquote>
+<p>python3 script</p>
+</blockquote>
+<p>or change executable privileges with <code>chmod +x</code> and </p>
+<blockquote>
+<p>./script</p>
+</blockquote>
+<h2 id="Import_and_Reload">Import and Reload</h2><blockquote>
+<p>import script</p>
+</blockquote>
+<p>Note that after the first import, later imports do nothing. If you want to run<br>the import again, use <code>reload</code>:</p>
+<blockquote>
+<p>from imp import reload</p>
+<p>reload(script) </p>
+</blockquote>
+<p>Note the differences between <code>import X</code> and <code>from X import Y</code>.</p>
+<blockquote>
+<p>import X</p>
+<p>X.Y</p>
+<p>from X import Y</p>
+<p>Y</p>
+</blockquote>
 
         
       
     </div>
 
     <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/"> #python </a>
+          
+        </div>
       
 
       
@@ -178,7 +237,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/07/21/h/">
+              <a class="post-title-link" href="/2015/07/21/hello-world/">
                 Hello World
               </a>
             
@@ -272,7 +331,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
