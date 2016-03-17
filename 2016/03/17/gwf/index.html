@@ -18,19 +18,9 @@
 
 
 
+	<meta name="keywords" content="cluster," />
 
-    <meta name="keywords" content="Hexo,next" />
-
-
-
-
-
-    <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.2" />
-
-
-
-
-  <title> Hello World // Laughinging's Blog </title>
+  <title> Quick introduction to GWF // Laughinging's Blog </title>
 </head>
 
 <body>
@@ -117,7 +107,7 @@
           
           
             
-              Hello World
+              Quick introduction to GWF
             
           
         </h1>
@@ -125,7 +115,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-07-21
+          Posted on 2016-03-17
         </span>
 
         
@@ -134,8 +124,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/07/21/hello-world/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/21/hello-world/"></span>
+            <a href="/2016/03/17/gwf/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/17/gwf/"></span>
             </a>
           </span>
           
@@ -149,23 +139,53 @@
       
 
       
-        <p>Welcome to my blog !  </p>
+        <h1 id="Install">Install</h1><p>Documentation: <a href="http://mailund.github.io/gwf/" target="_blank" rel="external">http://mailund.github.io/gwf/</a></p>
+<blockquote>
+<p>pip install <a href="https://github.com/mailund/gwf/archive/develop.zip" target="_blank" rel="external">https://github.com/mailund/gwf/archive/develop.zip</a></p>
+</blockquote>
+<h1 id="Functions">Functions</h1><ol>
+<li>specify a workflow </li>
+<li>submit jobs</li>
+<li>check job status </li>
+</ol>
+<h1 id="An_very_easy_example">An very easy example</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gwf <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">target(<span class="string">'UnZipGenome'</span>, input=<span class="string">'ponAbe2.fa.gz'</span>, output=<span class="string">'ponAbe2.fa'</span>) &lt;&lt; <span class="string">'''</span><br><span class="line">gzcat ponAbe2.fa.gz &gt; ponAbe2.fa</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+<p>we only need to specify tasks in <code>workflow.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gwf <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">target(<span class="string">'UnZipGenome'</span>, input=<span class="string">'ponAbe2.fa.gz'</span>, output=<span class="string">'ponAbe2.fa'</span>) &lt;&lt; <span class="string">'''</span><br><span class="line">gzcat ponAbe2.fa.gz &gt; ponAbe2.fa</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">target(<span class="string">'IndexGenome'</span>, input=<span class="string">'ponAbe2.fa'</span>,</span><br><span class="line">       output=[<span class="string">'ponAbe2.amb'</span>, <span class="string">'ponAbe2.ann'</span>, <span class="string">'ponAbe2.pac'</span>]) &lt;&lt; <span class="string">'''</span><br><span class="line">bwa index -p ponAbe2 -a bwtsw ponAbe2.fa</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">target(<span class="string">'MapReads'</span>, </span><br><span class="line">       input=[<span class="string">'ponAbe2.fa'</span>, </span><br><span class="line">              <span class="string">'ponAbe2.amb'</span>, <span class="string">'ponAbe2.ann'</span>, <span class="string">'ponAbe2.pac'</span>,</span><br><span class="line">              <span class="string">'Masala_R1.fastq.gz'</span>, <span class="string">'Masala_R2.fastq.gz'</span>],</span><br><span class="line">       output=<span class="string">'Masala.sorted.rmdup.bam'</span>) &lt;&lt; <span class="string">'''</span><br><span class="line"></span><br><span class="line">bwa mem -t 16 ponAbe2.fa Masala_R1.fastq.gz Masala_R2.fastq.gz | \</span><br><span class="line">    samtools view -Shb - &gt; /scratch/$GWF_JOBID/unsorted.bam</span><br><span class="line"></span><br><span class="line">samtools sort -o /scratch/$GWF_JOBID/unsorted.bam /scratch/$GWF_JOBID/sort | \</span><br><span class="line">    samtools rmdup -s - Masala.sorted.rmdup.bam</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+<h1 id="Templates">Templates</h1><p>Templates make it easier for us to write ‘target’ function, and they can be<br>used cross projects (just like what you can do with a latex templates).</p>
+<p>Let’s re-write the easy example with templates.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This is the template part</span></span><br><span class="line">unzip = template(input=<span class="string">'&#123;refGenome&#125;.fa.gz'</span>, output=<span class="string">'&#123;refGenome&#125;.fa'</span>) &lt;&lt; <span class="string">'''</span><br><span class="line">gzcat &#123;refGenome&#125;.fa.gz &gt; &#123;refGenome&#125;.fa</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This is the workflow part</span></span><br><span class="line">target(<span class="string">'UnZipGenome'</span>) &lt;&lt; unzip(refGenome=<span class="string">'ponAbe2'</span>)</span><br></pre></td></tr></table></figure>
+<p>What’s more, we can also generate templates. In fact, any function that<br>returns a dictionary <code>options</code> and a shell command <code>shell_spec</code> can serve as a<br>generator of a template.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(individual, inputfiles)</span>:</span></span><br><span class="line">  outputfile = <span class="string">'&#123;&#125;.bam'</span>.format(individual)</span><br><span class="line">  options = &#123;<span class="string">'input'</span>: inputfiles, <span class="string">'output'</span>: outputfile&#125;</span><br><span class="line">  shell_spec = <span class="string">'''</span><br><span class="line"></span><br><span class="line">  samtools merge - &#123;inputbams&#125; | samtools rmdup -s - &#123;name&#125;.bam</span><br><span class="line"></span><br><span class="line">  '''</span>.format(inputbams = <span class="string">' '</span>.join(inputfiles), name=individual)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (options, shell_spec)</span><br></pre></td></tr></table></figure>
+<h1 id="Some_useful_functions">Some useful functions</h1><h2 id="glob_and_shell_function">glob and shell function</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">files = <span class="keyword">glob</span>(<span class="string">"*"</span>)</span><br><span class="line">the_same_files = <span class="keyword">shell</span>(<span class="string">"ls"</span>)</span><br><span class="line">regions = <span class="keyword">glob</span>(<span class="string">"data/covered_region/*"</span>)</span><br><span class="line"></span><br><span class="line"># always <span class="keyword">return</span> a <span class="keyword">list</span></span><br><span class="line"><span class="keyword">dir</span> = <span class="keyword">shell</span>('<span class="keyword">pwd</span>')[0]</span><br></pre></td></tr></table></figure>
+<h2 id="overwrite_options:_nodes,_cores,_memory,_walltime…">overwrite options: nodes, cores, memory, walltime…</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sort_template = template(input=<span class="string">'&#123;annotation&#125;'</span>, output=<span class="string">'&#123;annotation&#125;.sorted'</span>) &lt;&lt; <span class="string">'''</span><br><span class="line">sort -k 1,1 -k 2n,2 &#123;annotation&#125; -o &#123;annotation&#125;.sorted</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># deal with very large file, default 2g. </span></span><br><span class="line">target(<span class="string">'sort'</span>, memory=<span class="string">'8g'</span>) &lt;&lt; sort_template()</span><br></pre></td></tr></table></figure>
+<h2 id="infix_operator">infix operator</h2><p>function f(g(x,y), z) can be called by:</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">x<span class="tag">&lt;&lt;<span class="attribute">g</span>&gt;</span>&gt;y<span class="tag">&lt;&lt;<span class="attribute">f</span>&gt;</span>&gt;z</span></span><br></pre></td></tr></table></figure>
+<p>very useful when dealing with string (file names, directories…)<br>three basic ones <code>tag</code>, <code>suffix</code>, <code>outdir</code></p>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="string">"qux/foo.a"</span>, <span class="string">"bar.b"</span>]</span><br><span class="line">x <span class="string">&lt;&lt;outdir&gt;&gt;</span> <span class="string">"qax"</span> <span class="string">&lt;&lt;tag&gt;&gt;</span> <span class="string">"qux"</span> <span class="string">&lt;&lt;suffix&gt;&gt;</span> <span class="string">".c"</span></span><br><span class="line"></span><br><span class="line">[<span class="string">'qax/qux_foo.c'</span>, <span class="string">'qax/qux_bar.c'</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="Check_job_status">Check job status</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gwf</span><br><span class="line">gwf <span class="comment">--status</span></span><br></pre></td></tr></table></figure>
+<p>A more user-friendly way than ‘mj’. Logs are automatically generated.</p>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/cluster/"> #cluster </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/26/python/">Learning Python 5th edition — Reading notes</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/26/python/">Learning Python 5th edition — Reading notes</a>
             
           </div>
         </div>
@@ -241,7 +261,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -283,7 +303,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Functions"><span class="nav-number">2.</span> <span class="nav-text">Functions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#An_very_easy_example"><span class="nav-number">3.</span> <span class="nav-text">An very easy example</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Templates"><span class="nav-number">4.</span> <span class="nav-text">Templates</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some_useful_functions"><span class="nav-number">5.</span> <span class="nav-text">Some useful functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#glob_and_shell_function"><span class="nav-number">5.1.</span> <span class="nav-text">glob and shell function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overwrite_options:_nodes,_cores,_memory,_walltime…"><span class="nav-number">5.2.</span> <span class="nav-text">overwrite options: nodes, cores, memory, walltime…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#infix_operator"><span class="nav-number">5.3.</span> <span class="nav-text">infix operator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Check_job_status"><span class="nav-number">6.</span> <span class="nav-text">Check job status</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -300,8 +320,8 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy; &nbsp; 
-  2015
+  &copy; &nbsp;  2015 - 
+  2016
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
@@ -877,8 +897,8 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'laughinging';
-      var disqus_identifier = '2015/07/21/hello-world/';
-      var disqus_url = 'http://yoursite.com/2015/07/21/hello-world/';
+      var disqus_identifier = '2016/03/17/gwf/';
+      var disqus_url = 'http://yoursite.com/2016/03/17/gwf/';
 
       (function(){
         var dsq = document.createElement('script');

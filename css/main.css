@@ -185,7 +185,7 @@ th {
 }
 body {
   position: relative;
-  font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "Microsoft YaHei", Verdana, sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #555;
@@ -211,54 +211,54 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1;
-  font-family: Cambria, Georgia, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif;
+  font-family: Georgia, sans;
 }
 h1 {
-  font-size: 24px;
+  font-size: 26px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 h2 {
-  font-size: 22px;
+  font-size: 24px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 p {
@@ -706,7 +706,7 @@ td {
 .post .gist .gist-file .gist-meta {
   background: #f7f7f7;
   color: #8e908c;
-  font: 13px Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font: 13px "Microsoft YaHei", Verdana, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -828,7 +828,7 @@ body {
   position: relative;
 }
 .site-meta {
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -1063,7 +1063,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa18f6;
+  background: #ffadff;
 }
 .sidebar-nav {
   margin: 0;
@@ -1388,7 +1388,7 @@ input.menu-search-input {
   }
 }
 .posts-collapse {
-  margin-left: 0;
+  margin-left: 55px;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1463,7 +1463,7 @@ input.menu-search-input {
   margin-left: 60px;
   font-size: 16px;
   font-weight: normal;
-  font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "Microsoft YaHei", Verdana, sans-serif;
   line-height: inherit;
 }
 .posts-collapse .post-title::after {
@@ -1886,7 +1886,7 @@ li {
 }
 .site-meta .brand {
   padding: 2px 1px;
-  color: #222;
+  color: #555;
   background: none;
 }
 @media (max-width: 767px) {
@@ -1912,7 +1912,6 @@ li {
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  width: 75%;
 }
 @media (max-width: 767px) {
   .logo-line-before,
@@ -1925,7 +1924,7 @@ li {
   position: relative;
   display: block;
   height: 4px;
-  background: #222;
+  background: #999;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
@@ -1957,7 +1956,7 @@ li {
 }
 .menu .menu-item a {
   padding: 5px 10px;
-  background: #222;
+  background: #555;
   border: none;
   color: #fff;
   transition-property: background;
@@ -1986,7 +1985,7 @@ li {
 }
 .posts-expand .post-title,
 .posts-expand .post-meta {
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title,
