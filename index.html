@@ -248,6 +248,126 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/05/ff/" itemprop="url">
+                  精分现场
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-05T18:22:17+02:00" content="2016-09-05">
+              2016-09-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/迷/" itemprop="url" rel="index">
+                    <span itemprop="name">迷</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/05/ff/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/05/ff/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://od1h41gue.bkt.clouddn.com/ff.png" alt="ff"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/04/diary_04092016/" itemprop="url">
                   这个周末的我简直不是自己
                 </a>
@@ -628,7 +748,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T23:11:10+02:00" content="2016-04-29">
+            <time itemprop="dateCreated" datetime="2016-04-29T22:10:12+02:00" content="2016-04-29">
               2016-04-29
             </time>
           </span>
@@ -684,25 +804,27 @@
       
         
           
-            <p>by wcc</p>
-<h1 id="Use_pip_for_Installing_Python_Packages_to_Different_Python_Interpreter">Use <code>pip</code> for Installing Python Packages to Different Python Interpreter</h1><p>There are 3 different python interpreters in my system. Python 2.7 is the default python interpreter linked to <code>python</code> in the terminal. I forget whether it was builtin the system or installed along with Xcode. Notice that Python 2.6 is also there. Meanwhile Python 3 is linked to <code>python3</code>. </p>
+            <p>author: wcc</p>
+<h2 id="Use_pip_for_Installing_Python_Packages_to_Different_Python_Interpreter">Use <code>pip</code> for Installing Python Packages to Different Python Interpreter</h2><p>There are 3 different python interpreters in my system. Python 2.7 is the default python interpreter linked to <code>python</code> in the terminal. I forget whether it was builtin the system or installed along with Xcode. Notice that Python 2.6 is also there. Meanwhile Python 3 is linked to <code>python3</code>. </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python --version&#10;Python 2.7.10&#10;$ python2.6 --version&#10;Python 2.6.9&#10;$ python3 --version&#10;Python 3.5.1</span><br></pre></td></tr></table></figure>
 <p><code>pip</code> and <code>pip3</code> command is used to install packages for default Python and Python 3 respectively. It is set automatically when I used the python <a href="https://www.python.org/downloads/mac-osx/" title="Python Releases for Mac OS X" target="_blank" rel="external">installer</a> for Mac OS X.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ which pip&#10;/usr/local/bin/pip&#10;$ which pip3&#10;/usr/local/bin/pip3&#10;$ ls -l /usr/local/bin/pip*&#10;-rwxr-xr-x  1 root  wheel  281 Jun  6 10:34 /usr/local/bin/pip&#10;-rwxr-xr-x  1 root  wheel  283 Jun  6 10:34 /usr/local/bin/pip2&#10;-rwxr-xr-x  1 root  wheel  287 Jun  6 10:34 /usr/local/bin/pip2.7&#10;lrwxrwxr-x  1 root  admin   66 Feb 14 06:29 /usr/local/bin/pip3 -&#62; ../../../Library/Frameworks/Python.framework/Versions/3.5/bin/pip3&#10;lrwxrwxr-x  1 root  admin   68 Feb 14 06:29 /usr/local/bin/pip3.5 -&#62; ../../../Library/Frameworks/Python.framework/Versions/3.5/bin/pip3.5</span><br></pre></td></tr></table></figure>
-<h1 id="Use_the_Package_Installed_to_Python_3_by_pip3_install">Use the Package Installed to Python 3 by <code>pip3 install</code></h1><p>I tried to solve the problem raising this article is to install the virtual python environment builder <a href="https://virtualenv.pypa.io/en/stable/" title="Virtualenv Documentation" target="_blank" rel="external">Virtualenv</a>. I use <code>pip</code> to install the <code>virtualenv</code> package to Python 3.</p>
+<h2 id="Use_the_Package_Installed_to_Python_3_by_pip3_install">Use the Package Installed to Python 3 by <code>pip3 install</code></h2><p>I tried to solve the problem raising this article is to install the virtual python environment builder <a href="https://virtualenv.pypa.io/en/stable/" title="Virtualenv Documentation" target="_blank" rel="external">Virtualenv</a>. I use <code>pip</code> to install the <code>virtualenv</code> package to Python 3.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install virtualenv&#10;$ vertualenv&#10;-bash: vertualenv: command not found</span><br></pre></td></tr></table></figure>
 <p>We need to add the original bin directory of <code>python3.5</code> to the environment variable <code>PATH</code> which contains the <code>vertualenv</code> program. I did this by editing the <code>~/.profile</code> which involves the user setting of the bash terminal.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ which python3&#10;/usr/local/bin/python3&#10;$ ls -l /usr/local/bin/python3&#10;lrwxr-xr-x  1 root  wheel  69 Feb 14 06:29 /usr/local/bin/python3 -&#62; ../../../Library/Frameworks/Python.framework/Versions/3.5/bin/python3</span><br></pre></td></tr></table></figure>
 <p>Add following scripts to <code>~/.profile</code> and restart the terminal. Notice the path directory is same with the shown one after <code>-&gt;</code> in the above script.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Setting PATH for Python 3.5&#10;PATH=&#34;$&#123;PATH&#125;:/Library/Frameworks/Python.framework/Versions/3.5/bin&#34;&#10;export PATH</span><br></pre></td></tr></table></figure></p>
-<h1 id="Raised_Problem">Raised Problem</h1><p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" title="MySQL-python 1.2.5 PyPI" target="_blank" rel="external">MySQLdb</a>(<code>mysql-python</code>) is not support Python 3 and above at the moment(12062012).<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mysql-python&#10;Requirement already satisfied (use --upgrade to upgrade): mysql-python in /Library/Python/2.7/site-packages&#10;&#10;$ pip3 install mysql-python&#10;Collecting mysql-python&#10;  Using cached MySQL-python-1.2.5.zip&#10;    Complete output from command python setup.py egg_info:&#10;    Traceback (most recent call last):&#10;      File &#34;&#60;string&#62;&#34;, line 1, in &#60;module&#62;&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/setup.py&#34;, line 13, in &#60;module&#62;&#10;        from setup_posix import get_config&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/setup_posix.py&#34;, line 2, in &#60;module&#62;&#10;        from ConfigParser import SafeConfigParser&#10;    ImportError: No module named &#39;ConfigParser&#39;&#10;    &#10;    ----------------------------------------&#10;Command &#34;python setup.py egg_info&#34; failed with error code 1 in /private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/</span><br></pre></td></tr></table></figure></p>
+<h2 id="Raised_Problem">Raised Problem</h2><p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5" title="MySQL-python 1.2.5 PyPI" target="_blank" rel="external">MySQLdb</a>(<code>mysql-python</code>) dose not support Python 3 and above at the moment(12062016).<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install mysql-python&#10;Requirement already satisfied (use --upgrade to upgrade): mysql-python in /Library/Python/2.7/site-packages&#10;&#10;$ pip3 install mysql-python&#10;Collecting mysql-python&#10;  Using cached MySQL-python-1.2.5.zip&#10;    Complete output from command python setup.py egg_info:&#10;    Traceback (most recent call last):&#10;      File &#34;&#60;string&#62;&#34;, line 1, in &#60;module&#62;&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/setup.py&#34;, line 13, in &#60;module&#62;&#10;        from setup_posix import get_config&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/setup_posix.py&#34;, line 2, in &#60;module&#62;&#10;        from ConfigParser import SafeConfigParser&#10;    ImportError: No module named &#39;ConfigParser&#39;&#10;    &#10;    ----------------------------------------&#10;Command &#34;python setup.py egg_info&#34; failed with error code 1 in /private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-3xksmiqo/mysql-python/</span><br></pre></td></tr></table></figure></p>
 <p>At the first glance, I thought <code>mysql-python</code> installation failed due to serveral different Python versions existing in my system at the same time. The script <code>setup.py</code> was executed by <code>python</code>(my default python command linked to Python 2.7), while I thought it should be <code>python3</code>(the command used to run my Python 3.5). Furthermore, considering the <code>ImportError</code> of lacking module <code>ConfigParser</code>(<code>import</code> of python is case sensitive, <a href="https://docs.python.org/2.7/library/configparser.html" title="ConfigParser Python 2.7 Documentation" target="_blank" rel="external"><code>ConfigParser</code> is Python 2.7 builtin module and has been changed to <code>configparser</code> since Python 3.0</a>), I tried to find solutions for installing package for different Python Interpreter in one system.</p>
-<h1 id="Use_virtualenv_to_Sovle_the_Package_Installing_Problem_in_Multi-Installation_Python_Enviroment">Use <code>virtualenv</code> to Sovle the Package Installing Problem in Multi-Installation Python Enviroment</h1><p><a href="http://stackoverflow.com/a/7237949" target="_blank" rel="external">http://stackoverflow.com/a/7237949</a><br>As same as <code>pip</code>, <code>virtualenv</code> is recommended for Python installation in <a href="https://packaging.python.org/en/latest/current/" title="Python Packaging and Installation Tool Recommendations" target="_blank" rel="external">Python Packaging User Guide</a>.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ virtualenv temp-python&#10;Using base prefix &#39;/Library/Frameworks/Python.framework/Versions/3.5&#39;&#10;New python executable in /Users/CKL/Documents/MATLAB/temp-python/bin/python3.5&#10;Also creating executable in /Users/CKL/Documents/MATLAB/temp-python/bin/python&#10;Installing setuptools, pip, wheel...done.&#10;$ source temp-python/bin/activate&#10;(temp-python)$ python --version&#10;3.5.1&#10;(temp-python)$ which python&#10;temp-python/bin/python&#10;(temp-python)$ ls temp-python/bin&#10;activate&#9;&#9;easy_install-3.5&#9;python-config&#10;activate.csh&#9;&#9;pip&#9;&#9;&#9;python3&#10;activate.fish&#9;&#9;pip3&#9;&#9;&#9;python3.5&#10;activate_this.py&#9;pip3.5&#9;&#9;&#9;wheel&#10;easy_install&#9;&#9;python&#10;(temp-python)$ pip install mysql-python&#10;Collecting mysql-python&#10;  Using cached MySQL-python-1.2.5.zip&#10;    Complete output from command python setup.py egg_info:&#10;    Traceback (most recent call last):&#10;      File &#34;&#60;string&#62;&#34;, line 1, in &#60;module&#62;&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/setup.py&#34;, line 13, in &#60;module&#62;&#10;        from setup_posix import get_config&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/setup_posix.py&#34;, line 2, in &#60;module&#62;&#10;        from ConfigParser import SafeConfigParser&#10;    ImportError: No module named &#39;ConfigParser&#39;&#10;    &#10;    ----------------------------------------&#10;Command &#34;python setup.py egg_info&#34; failed with error code 1 in /private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/&#10;(temp-python)$ deactivate&#10;$</span><br></pre></td></tr></table></figure>
+<h2 id="Use_virtualenv_to_Sovle_the_Package_Installing_Problem_in_Multi-Installation_Python_Enviroment">Use <code>virtualenv</code> to Sovle the Package Installing Problem in Multi-Installation Python Enviroment</h2><p><a href="http://stackoverflow.com/a/7237949" target="_blank" rel="external">http://stackoverflow.com/a/7237949</a><br>As same as <code>pip</code>, <code>virtualenv</code> is recommended for Python installation in <a href="https://packaging.python.org/en/latest/current/" title="Python Packaging and Installation Tool Recommendations" target="_blank" rel="external">Python Packaging User Guide</a>.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ virtualenv temp-python&#10;Using base prefix &#39;/Library/Frameworks/Python.framework/Versions/3.5&#39;&#10;New python executable in /Users/CKL/Documents/MATLAB/temp-python/bin/python3.5&#10;Also creating executable in /Users/CKL/Documents/MATLAB/temp-python/bin/python&#10;Installing setuptools, pip, wheel...done.&#10;$ source temp-python/bin/activate&#10;(temp-python)$ python --version&#10;3.5.1&#10;(temp-python)$ which python&#10;temp-python/bin/python&#10;(temp-python)$ ls temp-python/bin&#10;activate    easy_install-3.5  python-config&#10;activate.csh    pip     python3&#10;activate.fish   pip3      python3.5&#10;activate_this.py  pip3.5      wheel&#10;easy_install    python&#10;(temp-python)$ pip install mysql-python&#10;Collecting mysql-python&#10;  Using cached MySQL-python-1.2.5.zip&#10;    Complete output from command python setup.py egg_info:&#10;    Traceback (most recent call last):&#10;      File &#34;&#60;string&#62;&#34;, line 1, in &#60;module&#62;&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/setup.py&#34;, line 13, in &#60;module&#62;&#10;        from setup_posix import get_config&#10;      File &#34;/private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/setup_posix.py&#34;, line 2, in &#60;module&#62;&#10;        from ConfigParser import SafeConfigParser&#10;    ImportError: No module named &#39;ConfigParser&#39;&#10;    &#10;    ----------------------------------------&#10;Command &#34;python setup.py egg_info&#34; failed with error code 1 in /private/var/folders/n8/0fz1g82j7js5d5dnfq9gpr_40000gn/T/pip-build-qckpikbn/mysql-python/&#10;(temp-python)$ deactivate&#10;$</span><br></pre></td></tr></table></figure>
 <p><code>virtualenv temp-python</code> will make a folder <code>temp-python</code> in the current directory. The folder will involve the virtual enviroment for the specific Python Interpreter. The default interpreter is the one <code>virtualenv</code> installed with. Use <code>virtualenv -h</code> to check details.</p>
-<h1 id="Conclusion">Conclusion</h1><p>some achievements</p>
+<h2 id="Conclusion">Conclusion</h2><p>some achievements</p>
 <ul>
 <li>bash terminal setting executed order (/etc/profle ~/.profile /etc/bashrc)<br><a href="http://www.cyberciti.biz/faq/unix-linux-adding-path/" target="_blank" rel="external">http://www.cyberciti.biz/faq/unix-linux-adding-path/</a></li>
-<li>same command names finding in several $PATH directories(the very first one will be executed)<br><a href="http://superuser.com/a/141445" target="_blank" rel="external">http://superuser.com/a/141445</a></li>
+<li>same command names found in several $PATH directories(the very first one will be executed)<br><a href="http://superuser.com/a/141445" target="_blank" rel="external">http://superuser.com/a/141445</a></li>
+<li>Python 2 tools to connect mysql: mysql-python torndb pymysql </li>
+<li>Need to find useful tools of Python 3 to connect mysql</li>
 </ul>
 
           
@@ -1090,7 +1212,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
